@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
+import AddDog from '../../components/AddDog';
 
 export default function Admin() {
+
+  const [name, setName] = useState('');
   return (
-    <div>Admin</div>
+    <div>
+      <AddDog name={ name } />
+    </div>
   );
 }
