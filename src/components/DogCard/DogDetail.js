@@ -16,7 +16,7 @@ export default function DogDetail() {
     fetchDogData();
   }, [id]);
 
-  if (!dogData) return <h1>...Feeding Doggos</h1>;
+  if (!dogData) return <h1>...Walking Doggos</h1>;
 
   return (
     <>
