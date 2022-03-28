@@ -1,3 +1,12 @@
+1) NPM I 
+2) NETLIFY/GIThub secrets 
+3) Make supabase 
+4) Make Fetch
+5) Make home 
+6) Components 
+
+
+
 # Alchemy React Base Template
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
