@@ -6,8 +6,8 @@ export default function AddDog({ name, setName, age, setAge, bio, setBio, breed,
   const [error, setError] = useState('');
   const submitDog = async () => {
     try {
-      const submit = await createDog({ name, age, bio, breed, image });
-      console.log(submit);
+      await createDog({ name, age, bio, breed, image });
+      alert('Dog profile uploaded!');
     } catch (e) {
       setError('Oh no!');
     }
