@@ -18,10 +18,12 @@ export default function Home() {
 
       {dog.map((data) => (
         <div key={data.id}>
+          <img src={data.image}></img>
           {data.name}
           Age: ({data.age})
          Breed: ({data.breed})
          Bio: {data.bio}
+          
 
         </div>
       ))}
