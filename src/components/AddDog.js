@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { createDog } from '../services/fetchdogs';
 
 export default function AddDog({ name, setName, age, setAge, bio, setBio, breed, setBreed, image, setImage }) {
+  
   const [error, setError] = useState('');
   const submitDog = async () => {
     try {
@@ -10,6 +11,12 @@ export default function AddDog({ name, setName, age, setAge, bio, setBio, breed,
     } catch (e) {
       setError('Oh no!');
     }
+    setName('');
+    setAge(0);
+    setBio('');
+    setBreed('');
+    setImage('');
+    
   };
 
   return (
@@ -38,6 +45,7 @@ export default function AddDog({ name, setName, age, setAge, bio, setBio, breed,
       </label>
 
       <button onClick={submitDog}>submit</button>
+      
     </div>
   );
 }
