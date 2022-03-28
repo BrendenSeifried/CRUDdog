@@ -21,7 +21,7 @@ export default function DogDetail() {
   return (
     <>
       <div key={dogData.id}>
-        {/* <img>{dogData.image}</img> */}
+        <img src={dogData.image}/>
         <h2>{dogData.name}</h2>
         <h3>{dogData.age}</h3>
         <h3>{dogData.breed}</h3>
