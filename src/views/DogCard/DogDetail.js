@@ -27,8 +27,6 @@ export default function DogDetail() {
         <h3>{dogData.age}</h3>
         <h3>{dogData.breed}</h3>
         <p>{dogData.bio}</p>
-
-
       </div>
 
       <Link to={`/dogs`}>

@@ -2,8 +2,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 
 import Home from './views/Home/Home';
-import DogList from './components/DogCard/DogList';
-import DogDetail from './components/DogCard/DogDetail';
+import DogList from './views/DogCard/DogList';
+import DogDetail from './views/DogCard/DogDetail';
 
 function App() {
   return (

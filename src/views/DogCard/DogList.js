@@ -23,9 +23,6 @@ export default function Home() {
             <img src={data.image}/>
           </Link>
           {data.name}
-
-          
-
         </div>
       ))}
 
