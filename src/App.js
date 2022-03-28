@@ -4,7 +4,7 @@ import './App.css';
 import Home from './views/Home/Home';
 import DogList from './views/DogCard/DogList';
 import DogDetail from './views/DogCard/DogDetail';
-import Admin from './views/Admin/Admin';
+import NewDog from './views/Admin/NewDog';
 
 function App() {
   return (
@@ -19,13 +19,15 @@ function App() {
             <DogList />
           </Route>
 
+          <Route exact path = '/dogs/new'>
+            <NewDog />
+          </Route>
+
           <Route exact path = '/dogs/:id'>
             <DogDetail />
           </Route>
 
-          <Route exact path = '/dogs/new'>
-            <Admin />
-          </Route>
+     
           
 
 
