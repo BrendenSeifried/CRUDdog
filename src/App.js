@@ -4,7 +4,7 @@ import './App.css';
 import Home from './views/Home/Home';
 import DogList from './views/DogCard/DogList';
 import DogDetail from './views/DogCard/DogDetail';
-import NewDog from './views/Admin/NewDog';
+import NewDog from './views/NewDog/NewDog';
 
 function App() {
   return (
