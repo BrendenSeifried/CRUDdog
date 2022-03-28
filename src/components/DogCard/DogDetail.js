@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { fetchSingleDog } from '../../services/fetchdogs';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function DogDetail() {
   const params = useParams();
@@ -29,6 +30,10 @@ export default function DogDetail() {
 
 
       </div>
+
+      <Link to={`/dogs`}>
+        <h1> Adopt another Dog! </h1>
+      </Link>
 
     </>
   );
