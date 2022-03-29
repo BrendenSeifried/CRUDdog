@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import './DogList.css';
 
 import { fetchDogs } from '../../services/fetchdogs';
 
@@ -18,11 +19,15 @@ export default function Home() {
     <div>
 
       {dog.map((data) => (
-        <div key={data.id}>
+        <div className='dogpic' key={data.id}>
           <Link to={`/dogs/${data.id}`}>
-            <img src={data.image}/>
+            <img src={data.image} />
           </Link>
-          {data.name}
+
+          <div className='dogname'>
+            {data.name}
+          </div>
+
         </div>
       ))}
 

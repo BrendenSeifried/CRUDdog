@@ -1,0 +1,27 @@
+.dogname {
+    position:absolute;
+    top: 10%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-size: larger;
+    font-weight: bolder;
+    background-color: rgba(0, 0, 0, 0.644);
+    /* border-radius: 35px; */
+
+}
+
+.dogpic{
+    /* display: flex;
+    flex-direction: row;
+     */
+
+
+    position:relative;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    
+}
+
+.dogpic img {
+    height: 400px;
+}
