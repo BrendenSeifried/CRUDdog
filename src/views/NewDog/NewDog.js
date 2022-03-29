@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import AddDog from '../../components/AddDog';
+import './NewDog.css';
 
 export default function Admin() {
   const [name, setName] = useState('');
@@ -12,7 +13,7 @@ export default function Admin() {
   return (
     <div>
       <Link exact to = '/'>
-        Go Back
+        <button className='goback'>Go Back</button>
       </Link>
       <AddDog {...{ name, age, setName, setAge, bio, setBio, breed, setBreed, image, setImage }}/>
     </div>

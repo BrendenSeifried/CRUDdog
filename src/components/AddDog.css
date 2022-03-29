@@ -1,0 +1,59 @@
+.all {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) ;
+    border: 10px solid black;
+    padding: 20px;
+    background-color: aliceblue;
+
+}
+
+.divphoto {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* position:fixed;
+    top: 20%;
+    left: 45%;
+   */
+   padding: 20px;
+
+   
+
+}
+
+.divinfo {
+
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* position:fixed;
+    top: 32%;
+    left: 39%; */
+    padding:20px;
+}
+
+.divbio{
+
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+    /* position:fixed;
+    top: 50%;
+    left: 45%; */
+    padding:20px;
+}
+
+.info {
+    padding:10px;
+}
+
+.addbtn {
+    background-color: brown;
+    font-size: large;
+    font-weight: bolder;
+    border-radius: 10px;
+}
