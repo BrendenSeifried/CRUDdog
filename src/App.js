@@ -6,6 +6,7 @@ import DogList from './views/DogCard/DogList';
 import DogDetail from './views/DogCard/DogDetail';
 import NewDog from './views/NewDog/NewDog';
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -27,12 +28,8 @@ function App() {
             <DogDetail />
           </Route>
 
-     
-          
-
 
         </Switch>
-  
       </div>
     </BrowserRouter>
   );

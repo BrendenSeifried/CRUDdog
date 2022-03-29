@@ -16,7 +16,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div className='doggo'>
       {dog.map((data) => (
         <div className='dogpic' key={data.id}>
           <Link to={`/dogs/${data.id}`}>
