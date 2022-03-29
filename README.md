@@ -4,6 +4,8 @@
 4) Make Fetch
 5) Make home 
 6) Components 
+7) CSS
+8) Delete and edit
 
 
 

@@ -16,6 +16,6 @@ export async function createDog(dog) {
 }
 
 export async function deleteDog() {
-  const resp = await client.from('DogsCRUD').delete();
+  const resp = await client.from('DogsCRUD').delete().single();
   return checkError(resp);
 }
