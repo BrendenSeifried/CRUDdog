@@ -17,7 +17,6 @@ export default function Home() {
 
   return (
     <div>
-
       {dog.map((data) => (
         <div className='dogpic' key={data.id}>
           <Link to={`/dogs/${data.id}`}>
@@ -30,8 +29,6 @@ export default function Home() {
 
         </div>
       ))}
-
-
     </div>
   );
 }
