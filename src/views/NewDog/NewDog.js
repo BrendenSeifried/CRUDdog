@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import AddDog from '../../components/AddDog';
 
 export default function Admin() {
@@ -10,6 +11,9 @@ export default function Admin() {
 
   return (
     <div>
+      <Link exact to = '/'>
+        Go Back
+      </Link>
       <AddDog {...{ name, age, setName, setAge, bio, setBio, breed, setBreed, image, setImage }}/>
     </div>
   );
