@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { createDog } from '../services/fetchdogs';
 import './AddDog.css';
 
 export default function AddDog({ name, setName, age, setAge, bio, setBio, breed, setBreed, image, setImage }) {
-  
+  const history = useHistory();
   const [error, setError] = useState('');
   const submitDog = async () => {
     try {
       await createDog({ name, age, bio, breed, image });
       alert('Dog profile uploaded successfully!');
-      history.push('/');
+      history.push('/');/////GOES INTO DELETE
       
     } catch (e) {
-      setError('Oh no!');
+      setError('Oh no! Something went wrong.');
     }
     setName('');
     setAge(0);
