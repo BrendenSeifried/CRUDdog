@@ -1,10 +1,12 @@
 import React from 'react';
+import DogList from '../DogCard/DogList';
 
 export default function Home() {
   return (
-    <div>Home
+    <div>
+      <h1>Take a look at our wonderful dogs! Click any picture to view more info.</h1>
 
-        
+      <DogList />
     </div>
   );
 }

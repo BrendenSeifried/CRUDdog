@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { fetchSingleDog } from '../../services/fetchdogs';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import './DogDetail.css';
 
 export default function DogDetail() {
   const params = useParams();
@@ -27,7 +28,7 @@ export default function DogDetail() {
         <h3>{dogData.age}</h3>
         <h3>{dogData.breed}</h3>
         <p>{dogData.bio}</p>
-        <Link to={`/dogs`}>
+        <Link to={`/`}>
           <h1> Adopt another Dog! </h1>
         </Link>
       </div>

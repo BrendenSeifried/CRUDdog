@@ -15,7 +15,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div>Home
+    <div>
 
       {dog.map((data) => (
         <div key={data.id}>
