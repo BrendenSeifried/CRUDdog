@@ -1,9 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import DogList from '../DogCard/DogList';
 
 export default function Home() {
   return (
     <div>
+        Have a friend looking for Adoption? 
+      <Link exact to = '/dogs/new'>
+          Click here
+      </Link>
       <h1>Take a look at our wonderful dogs! Click any picture to view more info.</h1>
 
       <DogList />
