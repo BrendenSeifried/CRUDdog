@@ -9,6 +9,8 @@ export default function AddDog({ name, setName, age, setAge, bio, setBio, breed,
     try {
       await createDog({ name, age, bio, breed, image });
       alert('Dog profile uploaded successfully!');
+      history.push('/');
+      
     } catch (e) {
       setError('Oh no!');
     }
