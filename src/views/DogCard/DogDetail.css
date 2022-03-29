@@ -1,4 +1,26 @@
-.test{
+/* .details{
     background-color: rgba(161, 107, 26, 0.829);
-    background-size: cover;
+    /* display: flex;
+    flex:wrap;
+    justify-content: center;
+    width:fit-content; */
+    /* justify-content: center */
+    /* padding: 20px; 
+}*/
+
+.test{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    /* padding: 30px;  */
+    /* margin: 20px; */
+
+    /* width: fit-content; */
+    /* background-color: rgb(170, 159, 159); */
+}
+
+.container{
+    background-color: rgb(170, 159, 159);
+    border: 10px solid black;
 }
