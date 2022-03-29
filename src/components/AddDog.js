@@ -1,30 +1,11 @@
-import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
-import { createDog } from '../services/fetchdogs';
 import './AddDog.css';
 
-export default function AddDog({ name, setName, age, setAge, bio, setBio, breed, setBreed, image, setImage }) {
-  const history = useHistory();
-  const [error, setError] = useState('');
-  const submitDog = async () => {
-    try {
-      await createDog({ name, age, bio, breed, image });
-      alert('Dog profile uploaded successfully!');
-      history.push('/');/////GOES INTO DELETE
-      
-    } catch (e) {
-      setError('Oh no! Something went wrong.');
-    }
-    setName('');
-    setAge(0);
-    setBio('');
-    setBreed('');
-    setImage('');
-  };
+
+export default function AddDog({ name, setName, age, setAge, bio, setBio, breed, setBreed, image, setImage, submitDog }) {
+
 
   return (
     <div className='all'>
-      {error && <p>{error}</p>}
       <div className='divphoto'>
         <label className='photo'> Link a Photo:
           <input type="text" value={image} onChange={(e) => setImage(e.target.value)}/>
@@ -47,9 +28,9 @@ export default function AddDog({ name, setName, age, setAge, bio, setBio, breed,
       </div>
 
       <div className='divbio'>
-        <textbox className='bio'> Background:
+        <label className='bio'> Background:
           <input type="text" value={bio} onChange={(e) => setBio(e.target.value)}/>
-        </textbox>
+        </label>
       </div>
 
       

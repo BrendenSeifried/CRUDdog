@@ -8,20 +8,23 @@ export default function DogDetail() {
   const params = useParams();
   const id = params.id;
   const [dogData, setDogData] = useState([]);
-
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchDogData = async () => {
       const data = await fetchSingleDog(id);
       setDogData(data);
+      setLoading(false);
     };
+    
     fetchDogData();
   }, [id]);
 
-  if (!dogData) return <h1>...Walking Doggos</h1>;
+  // if (!dogData) return <h1>...Walking Doggos</h1> ;
+  if (loading) return <div>Loading, please wait.</div>;
 
   return (
-    <div div className='test'>
+    <div className='test'>
       <div className='container'>
         <div key={dogData.id}>   
           <img src={dogData.image}/>

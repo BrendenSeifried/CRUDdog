@@ -14,3 +14,8 @@ export async function createDog(dog) {
   const resp = await client.from('DogsCRUD').insert(dog);
   return checkError(resp);
 }
+
+export async function changeDog(change){
+  const resp = await client.from('DogsCRUD').update(change).match({ id: change.id });
+  return checkError(resp);
+}
