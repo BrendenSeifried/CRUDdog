@@ -19,3 +19,8 @@ export async function changeDog(change){
   const resp = await client.from('DogsCRUD').update(change).match({ id: change.id });
   return checkError(resp);
 }
+
+export async function deleteDog(id) {
+  const resp = await client.from('DogsCRUD').delete().match({ id }).single();
+  return checkError(resp);
+}

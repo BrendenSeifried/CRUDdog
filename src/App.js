@@ -6,6 +6,7 @@ import DogList from './views/DogCard/DogList';
 import DogDetail from './views/DogCard/DogDetail';
 import NewDog from './views/NewDog/NewDog';
 import EditDog from './views/EditDog/EditDog';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -35,6 +36,8 @@ function App() {
 
 
         </Switch>
+
+        <Footer />
       </div>
     </BrowserRouter>
   );

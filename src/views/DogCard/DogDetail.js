@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { fetchSingleDog } from '../../services/fetchdogs';
-import { useParams } from 'react-router-dom';
+import { deleteDog, fetchSingleDog } from '../../services/fetchdogs';
+import { useParams, useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import './DogDetail.css';
 
@@ -8,23 +8,34 @@ export default function DogDetail() {
   const params = useParams();
   const id = params.id;
   const [dogData, setDogData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const history = useHistory('');
 
   useEffect(() => {
     const fetchDogData = async () => {
       const data = await fetchSingleDog(id);
       setDogData(data);
-      setLoading(false);
     };
     
     fetchDogData();
   }, [id]);
 
-  // if (!dogData) return <h1>...Walking Doggos</h1> ;
-  if (loading) return <div>Loading, please wait.</div>;
+  const removeDog = async () => {
+    await deleteDog(id); 
+    history.push(`/`);
+  };
+
+
+  // };
+
+
+  if (!dogData) return <h1>...Walking Doggos</h1> ;
 
   return (
     <div className='test'>
+      <Link exact to = {`/dogs/${dogData.id}/edit`}>
+        <button className='Edit'>Edit info</button>
+      </Link>
+      <button onClick={removeDog}>Delete</button>
       <div className='container'>
         <div key={dogData.id}>   
           <img src={dogData.image}/>

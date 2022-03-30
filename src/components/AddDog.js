@@ -35,7 +35,7 @@ export default function AddDog({ name, setName, age, setAge, bio, setBio, breed,
 
       
 
-      <button className='addbtn' onClick={submitDog}>Send out for Adoption.</button>
+      <button className='addbtn' onClick={submitDog}>Submit</button>
       
     </div>
   );

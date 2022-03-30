@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useHistory, Link } from 'react-router-dom';
 import AddDog from '../../components/AddDog';
 import { fetchSingleDog, changeDog } from '../../services/fetchdogs';
 
@@ -33,15 +33,22 @@ export default function EditDog() {
       await changeDog({ id, name, age, bio, breed, image });
       history.push(`/dogs/${id}`);
     } catch (e) {
-      setError('Oh no!');
-      console.error(e.message);
+      setError('Oh no! Something went wrong.');
     }
   };
 
+
   return (
     <div>
-      {error && <p>{error}</p>}
-      <AddDog {...{ name, age, setName, setAge, bio, setBio, breed, setBreed, image, setImage, submitDog }}/>
+      <div>
+        {error && <p>{error}</p>}
+        <AddDog {...{ name, age, setName, setAge, bio, setBio, breed, setBreed, image, setImage, submitDog }}/>
+      </div>
+      <div>
+        <Link exact to = {`/dogs/${id}`}>
+          <h1>Cancel Edit</h1>
+        </Link>
+      </div>
     </div>
   );
 }

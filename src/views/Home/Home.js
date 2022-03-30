@@ -12,8 +12,11 @@ export default function Home() {
           <h3 className='newdoglink'> Click Here!</h3>
         </Link>
       </div>
-      <h1>Take a look at our wonderful dogs! Click any picture to view more info.</h1>
+      <div>
+        <h1>Take a look at our wonderful dogs! Click any picture to view more info.</h1>
+      </div>
       <DogList />
+      
     </div>
   );
 }
