@@ -1,4 +1,5 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { useState } from 'react';
 import './App.css';
 
 import Home from './views/Home/Home';
@@ -11,6 +12,7 @@ import Authorize from './views/Authorize/Authorize';
 
 
 function App() {
+  const [currentUser, setCurrentUser] = useState(null);
   return (
     <BrowserRouter>
       <div className="App">
@@ -20,7 +22,7 @@ function App() {
           </Route>
 
           <Route exact path = '/auth'>
-            <Authorize />
+            <Authorize setCurrentUser={setCurrentUser}/>
           </Route>
 
           <Route exact path = '/dogs'>
