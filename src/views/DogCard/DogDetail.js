@@ -4,11 +4,13 @@ import { useParams, useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import './DogDetail.css';
 
-export default function DogDetail() {
+export default function DogDetail({ currentUser }) {
   const params = useParams();
   const id = params.id;
   const [dogData, setDogData] = useState([]);
   const history = useHistory('');
+  
+ 
 
   useEffect(() => {
     const fetchDogData = async () => {
@@ -28,10 +30,14 @@ export default function DogDetail() {
 
   return (
     <div className='test'>
-      <Link exact to = {`/dogs/${dogData.id}/edit`}>
-        <button className='Edit'>Edit info</button>
-      </Link>
-      <button onClick={removeDog}>Delete</button>
+      {currentUser && (
+        <>
+          <Link exact to = {`/dogs/${dogData.id}/edit`}>
+            <button className='Edit'>Edit info</button>
+          </Link>
+          <button onClick={removeDog}>Delete</button>
+        </>
+      )}
       <div className='container'>
         <div key={dogData.id}>   
           <img src={dogData.image}/>

@@ -7,7 +7,6 @@ import DogList from './views/DogCard/DogList';
 import DogDetail from './views/DogCard/DogDetail';
 import NewDog from './views/NewDog/NewDog';
 import EditDog from './views/EditDog/EditDog';
-import Footer from './components/Footer';
 import Authorize from './views/Authorize/Authorize';
 import Header from './components/Header';
 import { getUser } from './services/fetchauth';
@@ -19,7 +18,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header setCurrentUser={setCurrentUser}/>
+        <Header currentUser={currentUser} setCurrentUser={setCurrentUser}/>
         <Switch>
           <Route exact path = '/'>
             <Home />
@@ -42,13 +41,12 @@ function App() {
           </Route>
 
           <Route exact path = '/dogs/:id'>
-            <DogDetail />
+            <DogDetail currentUser={currentUser}/>
           </Route>
 
 
         </Switch>
 
-        <Footer />
       </div>
     </BrowserRouter>
   );
