@@ -14,7 +14,7 @@ import { getUser } from './services/fetchauth';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(getUser());
- 
+
   return (
     <BrowserRouter>
       <div className="App">
