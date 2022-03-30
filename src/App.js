@@ -10,10 +10,11 @@ import EditDog from './views/EditDog/EditDog';
 import Footer from './components/Footer';
 import Authorize from './views/Authorize/Authorize';
 import Header from './components/Header';
+import { getUser } from './services/fetchauth';
 
 
 function App() {
-  const [currentUser, setCurrentUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState(getUser());
   return (
     <BrowserRouter>
       <div className="App">
