@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import { useState } from 'react';
 import './App.css';
 
@@ -15,6 +15,7 @@ import { getUser } from './services/fetchauth';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(getUser());
+ 
   return (
     <BrowserRouter>
       <div className="App">
@@ -33,7 +34,7 @@ function App() {
           </Route>
 
           <Route exact path = '/dogs/new'>
-            <NewDog />
+            {currentUser ? <NewDog /> : <Redirect to='/auth'/>}
           </Route>
 
           <Route exact path = '/dogs/:id/edit'>

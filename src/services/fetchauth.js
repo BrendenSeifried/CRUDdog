@@ -13,7 +13,7 @@ export async function signUpUser(email, password) {
 }
 
 export async function signInUser(email, password) {
-  const { user, error } = await client.auth.signIp({ email, password });
+  const { user, error } = await client.auth.signUp({ email, password });
   if (error) {
     throw error;
   }
