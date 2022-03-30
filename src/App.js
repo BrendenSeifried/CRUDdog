@@ -19,7 +19,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Header />
+        <Header setCurrentUser={setCurrentUser}/>
         <Switch>
           <Route exact path = '/'>
             <Home />
@@ -38,7 +38,7 @@ function App() {
           </Route>
 
           <Route exact path = '/dogs/:id/edit'>
-            <EditDog />
+            {currentUser ? <EditDog /> : <Redirect to='/auth'/>}
           </Route>
 
           <Route exact path = '/dogs/:id'>

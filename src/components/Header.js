@@ -12,8 +12,9 @@ export default function Header({ currentUser, setCurrentUser }) {
 
   return (
     <div>
-      {currentUser && 
+      {!currentUser && 
         <div onClick={handleLogout}>
+          <button>logout</button>
             
         </div>
         
