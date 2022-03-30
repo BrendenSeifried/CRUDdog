@@ -9,6 +9,7 @@ import NewDog from './views/NewDog/NewDog';
 import EditDog from './views/EditDog/EditDog';
 import Footer from './components/Footer';
 import Authorize from './views/Authorize/Authorize';
+import Header from './components/Header';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+        <Header />
         <Switch>
           <Route exact path = '/'>
             <Home />
