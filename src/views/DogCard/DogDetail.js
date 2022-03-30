@@ -24,10 +24,6 @@ export default function DogDetail() {
     history.push(`/`);
   };
 
-
-  // };
-
-
   if (!dogData) return <h1>...Walking Doggos</h1> ;
 
   return (

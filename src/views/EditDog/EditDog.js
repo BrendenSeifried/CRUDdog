@@ -37,7 +37,6 @@ export default function EditDog() {
     }
   };
 
-
   return (
     <div>
       <div>
