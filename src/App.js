@@ -7,6 +7,7 @@ import DogDetail from './views/DogCard/DogDetail';
 import NewDog from './views/NewDog/NewDog';
 import EditDog from './views/EditDog/EditDog';
 import Footer from './components/Footer';
+import Authorize from './views/Authorize/Authorize';
 
 
 function App() {
@@ -16,6 +17,10 @@ function App() {
         <Switch>
           <Route exact path = '/'>
             <Home />
+          </Route>
+
+          <Route exact path = '/auth'>
+            <Authorize />
           </Route>
 
           <Route exact path = '/dogs'>
