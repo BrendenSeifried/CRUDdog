@@ -9,6 +9,7 @@ export default function DogDetail({ currentUser }) {
   const id = params.id;
   const [dogData, setDogData] = useState([]);
   const history = useHistory('');
+  const [loading, setLoading] = useState('');
   
  
 
@@ -16,6 +17,7 @@ export default function DogDetail({ currentUser }) {
     const fetchDogData = async () => {
       const data = await fetchSingleDog(id);
       setDogData(data);
+      console.log(data);
     };
     
     fetchDogData();
@@ -26,7 +28,7 @@ export default function DogDetail({ currentUser }) {
     history.push(`/`);
   };
 
-  if (!dogData.length) return <h1>...Walking Doggos</h1> ;
+  if (loading) return <h1>...Walking Doggos</h1> ;
 
   return (
     <div className='test'>
