@@ -17,7 +17,6 @@ export default function DogDetail({ currentUser }) {
     const fetchDogData = async () => {
       const data = await fetchSingleDog(id);
       setDogData(data);
-      console.log(data);
     };
     
     fetchDogData();
