@@ -9,7 +9,7 @@ export default function DogDetail({ currentUser }) {
   const id = params.id;
   const [dogData, setDogData] = useState([]);
   const history = useHistory('');
-  const [loading, setLoading] = useState('');
+  const [loading, setLoading] = useState(true);
   
  
 
