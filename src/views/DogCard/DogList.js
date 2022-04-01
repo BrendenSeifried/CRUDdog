@@ -21,12 +21,10 @@ export default function Home() {
         <div className='dogpic' key={data.id}>
           <Link to={`/dogs/${data.id}`}>
             <img src={data.image} />
+            <div className='dogname'>
+              {data.name}
+            </div>
           </Link>
-
-          <div className='dogname'>
-            {data.name}
-          </div>
-
         </div>
       ))}
     </div>
