@@ -36,7 +36,7 @@ export default function EditDog() {
       setError('Oh no! Something went wrong.');
     }
   };
-////trying to push
+
   return (
     <div>
       <div>
