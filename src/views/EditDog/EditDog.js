@@ -10,7 +10,7 @@ export default function EditDog() {
   const id = params.id;
 
   // const { error, setError, name, setName, breed, setBreed, age, setAge, bio, setBio, image, setImage } = useLoginContext();
-  // Why doesnt setloaidng or any set state work in a useEffect?
+  // Why doesnt setloaidng or any set state work in a useEffect?/////////////////////////////
 
   const [error, setError] = useState('');
   const [name, setName] = useState('');
