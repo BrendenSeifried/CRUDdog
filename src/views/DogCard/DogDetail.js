@@ -15,7 +15,7 @@ export default function DogDetail() {
   const [loading, setLoading] = useState(true);
   const history = useHistory('');
 
-  // const { currentUser, loading, setLoading } = useLoginContext();
+  // const { currentUser, loading, setLoading } = useLoginContext(); 
   // Why doesnt setloaidng or any set state work in a useEffect?/////////////////////////////////
   
  

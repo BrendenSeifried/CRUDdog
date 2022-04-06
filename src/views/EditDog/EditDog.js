@@ -8,9 +8,11 @@ import { fetchSingleDog, changeDog } from '../../services/fetchdogs';
 export default function EditDog() {
   const params = useParams();
   const id = params.id;
+  
+////Below is the code I was running but CI failed it for some reason it seems to be anything inside of a useEffect that it doenst like. If you re enabled line 12 and disabled lines 15-20 the website works absolutely fine the only problem is the damn CI. 
 
   // const { error, setError, name, setName, breed, setBreed, age, setAge, bio, setBio, image, setImage } = useLoginContext();
-  // Why doesnt setloaidng or any set state work in a useEffect?/////////////////////////////
+
 
   const [error, setError] = useState('');
   const [name, setName] = useState('');
