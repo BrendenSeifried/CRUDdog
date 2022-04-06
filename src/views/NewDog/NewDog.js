@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import AddDog from '../../components/AddDog';
 import { useLoginContext } from '../../context/LoginContext';
@@ -7,7 +7,7 @@ import { createDog } from '../../services/fetchdogs';
 import './NewDog.css';
 
 export default function Admin() {
-  const { error, setError, name, setName, breed, setBreed, age, setAge, bio, setBio, image, setImage } = useLoginContext();
+  const { error, setError, name, breed, age, bio, image } = useLoginContext();
 
 
   // const [name, setName] = useState('');
@@ -38,7 +38,7 @@ export default function Admin() {
       <Link exact to = '/'>
         <button className='goback'>Go Back</button>
       </Link>
-      <AddDog {...{ name, age, setName, setAge, bio, setBio, breed, setBreed, image, setImage, submitDog }}/>
+      <AddDog {...{ submitDog }}/>
 
     </div>
   );

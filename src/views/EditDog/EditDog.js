@@ -44,7 +44,7 @@ export default function EditDog() {
     <div>
       <div>
         {error && <p>{error}</p>}
-        <AddDog {...{ name, age, setName, setAge, bio, setBio, breed, setBreed, image, setImage, submitDog }}/>
+        <AddDog {...{ submitDog }}/>
       </div>
       <div>
         <Link exact to = {`/dogs/${id}`}>

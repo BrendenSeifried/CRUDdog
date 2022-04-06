@@ -1,8 +1,9 @@
+import { useLoginContext } from '../context/LoginContext';
 import './AddDog.css';
 
 
-export default function AddDog({ name, setName, age, setAge, bio, setBio, breed, setBreed, image, setImage, submitDog }) {
-
+export default function AddDog({ submitDog }) {
+  const { name, setName, age, setAge, bio, setBio, breed, setBreed, image, setImage } = useLoginContext();
 
   return (
     <div className='all'>
