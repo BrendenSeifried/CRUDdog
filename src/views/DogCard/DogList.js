@@ -4,12 +4,16 @@ import './DogList.css';
 
 import { fetchDogs } from '../../services/fetchdogs';
 // import { useDogContext } from '../../context/Edit_NewContext';
-import { useLoginContext } from '../../context/LoginContext';
+// import { useLoginContext } from '../../context/LoginContext';
 
 export default function Home() {
   const [dog, setDog] = useState([]);
-  // const [loading, setLoading] = useState(true);
-  const { loading, setLoading } = useLoginContext();
+  const [loading, setLoading] = useState(true);
+
+
+  // const { loading, setLoading } = useLoginContext();
+  // Why doesnt setloaidng or any set state work in a useEffect?/////////////////////////////////
+
 
   useEffect(()=> {
     const fetchDoggosFunct = async () => {
