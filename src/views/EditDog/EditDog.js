@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams, useHistory, Link } from 'react-router-dom';
 import AddDog from '../../components/AddDog';
-import { useLoginContext } from '../../context/LoginContext';
+// import { useLoginContext } from '../../context/LoginContext';
 import { fetchSingleDog, changeDog } from '../../services/fetchdogs';
 
 
@@ -9,14 +9,15 @@ export default function EditDog() {
   const params = useParams();
   const id = params.id;
 
-  const { error, setError, name, setName, breed, setBreed, age, setAge, bio, setBio, image, setImage } = useLoginContext();
+  // const { error, setError, name, setName, breed, setBreed, age, setAge, bio, setBio, image, setImage } = useLoginContext();
+  // Why doesnt setloaidng or any set state work in a useEffect?
 
-  // const [error, setError] = useState('');
-  // const [name, setName] = useState('');
-  // const [age, setAge] = useState('');
-  // const [bio, setBio] = useState('');
-  // const [breed, setBreed] = useState('');
-  // const [image, setImage] = useState('');
+  const [error, setError] = useState('');
+  const [name, setName] = useState('');
+  const [age, setAge] = useState('');
+  const [bio, setBio] = useState('');
+  const [breed, setBreed] = useState('');
+  const [image, setImage] = useState('');
   const history = useHistory();
 
   useEffect(() => {

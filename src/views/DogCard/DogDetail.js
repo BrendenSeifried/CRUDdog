@@ -4,15 +4,17 @@ import { deleteDog, fetchSingleDog } from '../../services/fetchdogs';
 import { useHistory, useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import './DogDetail.css';
-import { useLoginContext } from '../../context/LoginContext';
+// import { useLoginContext } from '../../context/LoginContext';
 
 export default function DogDetail() {
   const params = useParams();
   const id = params.id;
   const [dogData, setDogData] = useState([]);
+  const [loading, setLoading] = useState(true);
   const history = useHistory('');
 
-  const { currentUser, loading, setLoading } = useLoginContext();
+  // const { currentUser, loading, setLoading } = useLoginContext();
+  // Why doesnt setloaidng or any set state work in a useEffect?
   
  
 
