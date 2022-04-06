@@ -1,5 +1,4 @@
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
-import { useState } from 'react';
 import './App.css';
 
 import Home from './views/Home/Home';
