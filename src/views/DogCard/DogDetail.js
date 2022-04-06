@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { deleteDog, fetchSingleDog } from '../../services/fetchdogs';
 // import { useParams, useHistory } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import './DogDetail.css';
 import { useLoginContext } from '../../context/LoginContext';
@@ -10,9 +10,9 @@ export default function DogDetail() {
   const params = useParams();
   const id = params.id;
   const [dogData, setDogData] = useState([]);
-  // const history = useHistory('');
+  const history = useHistory('');
 
-  const { history, currentUser, loading, setLoading } = useLoginContext();
+  const { currentUser, loading, setLoading } = useLoginContext();
   
  
 

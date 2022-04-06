@@ -7,14 +7,27 @@ const LoginContext = createContext();
 const LogProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [currentUser, setCurrentUser] = useState(getUser());
-  const history = useHistory('');
+
+  const [name, setName] = useState('');
+//   const [age, setAge] = useState('');
+//   const [bio, setBio] = useState('');
+//   const [breed, setBreed] = useState('');
+//   const [image, setImage] = useState('');
+//   const [error, setError] = useState('');
+
+
   const handleLogout = async () => {
     await logout();
     setCurrentUser('');
   };
 
+//   return (
+//     <LoginContext.Provider value={{ history, loading, setLoading, currentUser, setCurrentUser, handleLogout }}>{children}</LoginContext.Provider>
+//   );
+// };
+
   return (
-    <LoginContext.Provider value={{ history, loading, setLoading, currentUser, setCurrentUser, handleLogout }}>{children}</LoginContext.Provider>
+    <LoginContext.Provider value={{ name, setName, loading, setLoading, currentUser, setCurrentUser, handleLogout }}>{children}</LoginContext.Provider>
   );
 };
 

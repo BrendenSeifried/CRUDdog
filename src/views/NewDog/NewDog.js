@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import AddDog from '../../components/AddDog';
+import { useLoginContext } from '../../context/LoginContext';
 import { createDog } from '../../services/fetchdogs';
 
 import './NewDog.css';
 
 export default function Admin() {
-  const [name, setName] = useState('');
+  const { name, setName } = useLoginContext();
+
+
+  // const [name, setName] = useState('');
   const [age, setAge] = useState('');
   const [bio, setBio] = useState('');
   const [breed, setBreed] = useState('');
