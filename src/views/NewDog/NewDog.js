@@ -7,15 +7,15 @@ import { createDog } from '../../services/fetchdogs';
 import './NewDog.css';
 
 export default function Admin() {
-  const { name, setName } = useLoginContext();
+  const { error, setError, name, setName, breed, setBreed, age, setAge, bio, setBio, image, setImage } = useLoginContext();
 
 
   // const [name, setName] = useState('');
-  const [age, setAge] = useState('');
-  const [bio, setBio] = useState('');
-  const [breed, setBreed] = useState('');
-  const [image, setImage] = useState('');
-  const [error, setError] = useState('');
+  // const [age, setAge] = useState('');
+  // const [bio, setBio] = useState('');
+  // const [breed, setBreed] = useState('');
+  // const [image, setImage] = useState('');
+  // const [error, setError] = useState('');
   const history = useHistory();
 
 

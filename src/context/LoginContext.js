@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import { getUser, logout } from '../services/fetchauth';
 
 const LoginContext = createContext();
@@ -7,13 +6,14 @@ const LoginContext = createContext();
 const LogProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
   const [currentUser, setCurrentUser] = useState(getUser());
+  
 
   const [name, setName] = useState('');
-//   const [age, setAge] = useState('');
-//   const [bio, setBio] = useState('');
-//   const [breed, setBreed] = useState('');
-//   const [image, setImage] = useState('');
-//   const [error, setError] = useState('');
+  const [age, setAge] = useState('');
+  const [bio, setBio] = useState('');
+  const [breed, setBreed] = useState('');
+  const [image, setImage] = useState('');
+  const [error, setError] = useState('');
 
 
   const handleLogout = async () => {
@@ -27,7 +27,7 @@ const LogProvider = ({ children }) => {
 // };
 
   return (
-    <LoginContext.Provider value={{ name, setName, loading, setLoading, currentUser, setCurrentUser, handleLogout }}>{children}</LoginContext.Provider>
+    <LoginContext.Provider value={{ error, setError, age, setAge, bio, setBio, breed, setBreed, image, setImage, name, setName, loading, setLoading, currentUser, setCurrentUser, handleLogout }}>{children}</LoginContext.Provider>
   );
 };
 
