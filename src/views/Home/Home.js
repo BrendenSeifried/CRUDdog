@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useLoginContext } from '../../context/LoginContext';
 import DogList from '../DogCard/DogList';
 import './Home.css';
 
-export default function Home({ currentUser }) {
+export default function Home() {
+  const { currentUser } = useLoginContext();
   return (
     <div>
       <div className='newdog'>

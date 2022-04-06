@@ -3,10 +3,13 @@ import { Link } from 'react-router-dom';
 import './DogList.css';
 
 import { fetchDogs } from '../../services/fetchdogs';
+// import { useDogContext } from '../../context/Edit_NewContext';
+import { useLoginContext } from '../../context/LoginContext';
 
 export default function Home() {
   const [dog, setDog] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
+  const { loading, setLoading } = useLoginContext();
 
   useEffect(()=> {
     const fetchDoggosFunct = async () => {

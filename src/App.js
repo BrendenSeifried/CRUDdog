@@ -9,23 +9,25 @@ import NewDog from './views/NewDog/NewDog';
 import EditDog from './views/EditDog/EditDog';
 import Authorize from './views/Authorize/Authorize';
 import Header from './components/Header';
-import { getUser } from './services/fetchauth';
+// import { getUser } from './services/fetchauth';
+import { useLoginContext } from './context/LoginContext';
 
 
 function App() {
-  const [currentUser, setCurrentUser] = useState(getUser());
+  // const [currentUser, setCurrentUser] = useState(getUser());
+  const { currentUser } = useLoginContext();
 
   return (
     <BrowserRouter>
       <div className="App">
-        <Header currentUser={currentUser} setCurrentUser={setCurrentUser}/>
+        <Header />
         <Switch>
           <Route exact path = '/'>
-            <Home currentUser={currentUser} />
+            <Home />
           </Route>
 
           <Route exact path = '/auth'>
-            <Authorize setCurrentUser={setCurrentUser}/>
+            <Authorize />
           </Route>
 
           <Route exact path = '/dogs'>
@@ -41,7 +43,7 @@ function App() {
           </Route>
 
           <Route exact path = '/dogs/:id'>
-            <DogDetail currentUser={currentUser}/>
+            <DogDetail />
           </Route>
 
 

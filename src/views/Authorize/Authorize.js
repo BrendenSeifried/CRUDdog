@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useLoginContext } from '../../context/LoginContext';
 import { signInUser } from '../../services/fetchauth';
 
-export default function Authorize({ setCurrentUser }) {
+export default function Authorize() {
+  const { setCurrentUser } = useLoginContext();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');

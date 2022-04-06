@@ -2,10 +2,12 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Footer.css';
 import { logout } from '../services/fetchauth';
+import { useLoginContext } from '../context/LoginContext';
 
 
 
-export default function Header({ currentUser, setCurrentUser }) {
+export default function Header() {
+  const { currentUser, setCurrentUser } = useLoginContext();
   const handleLogout = async () => {
     await logout();
     setCurrentUser('');
