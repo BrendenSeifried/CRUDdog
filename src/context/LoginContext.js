@@ -16,15 +16,12 @@ const LogProvider = ({ children }) => {
   const [error, setError] = useState('');
 
 
+
   const handleLogout = async () => {
     await logout();
     setCurrentUser('');
   };
 
-//   return (
-//     <LoginContext.Provider value={{ history, loading, setLoading, currentUser, setCurrentUser, handleLogout }}>{children}</LoginContext.Provider>
-//   );
-// };
 
   return (
     <LoginContext.Provider value={{ error, setError, age, setAge, bio, setBio, breed, setBreed, image, setImage, name, setName, loading, setLoading, currentUser, setCurrentUser, handleLogout }}>{children}</LoginContext.Provider>

@@ -32,7 +32,7 @@ export default function EditDog() {
       setImage(data.image);
     };
     grabDog();
-  }, [id]);
+  }, [id, setName, setAge, setBio, setBreed, setImage]);
 
   const submitDog = async () => {
     try {

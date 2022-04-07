@@ -8,15 +8,14 @@ import { useLoginContext } from '../../context/LoginContext';
 // import { useLoginContext } from '../../context/LoginContext';
 
 export default function DogDetail() {
-  const { currentUser } = useLoginContext();
+  const { currentUser, loading, setLoading } = useLoginContext();
   const params = useParams();
   const id = params.id;
   const [dogData, setDogData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const history = useHistory('');
 
-  // const { currentUser, loading, setLoading } = useLoginContext(); 
-  // Why doesnt setloaidng or any set state work in a useEffect?/////////////////////////////////
+
   
  
 
@@ -28,7 +27,7 @@ export default function DogDetail() {
     };
     
     fetchDogData();
-  }, [id]);
+  }, [id, setLoading]);
 
   const removeDog = async () => {
     await deleteDog(id); 
